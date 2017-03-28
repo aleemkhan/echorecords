@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Adding a Custom Overlay</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiLJ6znVQ-km4K5FlDPMeF4cFBxHATLK0"></script>
+    <script>
+      // This example creates a custom overlay called USGSOverlay, containing
+      // a U.S. Geological Survey (USGS) image of the relevant area on the map.
+
+      // Set the custom overlay object's prototype to a new instance
+      // of OverlayView. In effect, this will subclass the overlay class therefore
+      // it's simpler to load the API synchronously, using
+      // google.maps.event.addDomListener().
+      // Note that we set the prototype to an instance, rather than the
+      // parent class itself, because we do not wish to modify the parent class.
+      var map;
+        var chicago = new google.maps.LatLng(31.5546, 74.3572);
+      function initialize() {
+
+            var roadAtlasStyles = [
+			  {
+			      "featureType": "road.highway",
+			      "elementType": "geometry",
+			      "stylers": [
+			        { "saturation": -100 },
+			        { "lightness": -20 },
+			        { "gamma": 1.18 }
+			      ]
+			  }, {
+			      "featureType": "road.arterial",
+			      "elementType": "geometry",
+			      "stylers": [
+			        { "saturation": -100 },
+			        { "gamma": 1 },
+			        { "lightness": -24 }
+			      ]
+			  }, {
+			      "featureType": "poi",
+			      "elementType": "geometry",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			      "featureType": "administrative",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			      "featureType": "transit",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			      "featureType": "water",
+			      "elementType": "geometry.fill",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			      "featureType": "road",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			      "featureType": "administrative",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			      "featureType": "landscape",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			      "featureType": "poi",
+			      "stylers": [
+			        { "saturation": -100 }
+			      ]
+			  }, {
+			  }
+            ]
+
+            var mapOptions = {
+                zoom: 14,
+                center: chicago,
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas']
+                }
+            };
+
+            map = new google.maps.Map(document.getElementById('map'),
+                mapOptions);
+
+            var styledMapOptions = {
+                
+            };
+
+            var usRoadMapType = new google.maps.StyledMapType(
+                roadAtlasStyles, styledMapOptions);
+
+            map.mapTypes.set('usroadatlas', usRoadMapType);
+            map.setMapTypeId('usroadatlas');
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
