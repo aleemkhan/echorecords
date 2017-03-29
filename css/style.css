@@ -17,6 +17,23 @@ input{
     src: url(../fonts/BebasNeue-Regular.otf);
 }
 
+@font-face {
+    font-family: proximaLight;
+    src: url(../fonts/ProximaNova-Light.otf);
+}
+
+@font-face {
+    font-family: proximaRegular;
+    src: url(../fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+    font-family: proximaBold;
+    src: url(../fonts/ProximaNova-Bold.otf);
+}
+
+
+
 .nav>ul>li{
 
 }
@@ -33,9 +50,23 @@ input{
 	font-family: bebasLight;
 }
 
+.proximaBold{
+	font-family: proximaBold;
+}
+
+.proximaRegular{
+	font-family: proximaRegular;
+}
+
+.proximaLight{
+	font-family: proximaLight;
+}
+
 
 body{
 	color:white;
+	font-family: proximaRegular;
+	letter-spacing: 2px;
 }
 
 .yellow{
@@ -64,9 +95,23 @@ body{
 }
 
 
-.lineheight-2p5{
-	line-height: 2.5em;
+.spacing-2{
+	letter-spacing: 2px;
 }
+.spacing-4{
+	letter-spacing: 4px;
+}
+.spacing-6{
+	letter-spacing: 6px;
+}
+.spacing-8{
+	letter-spacing: 8px;
+}
+.spacing-10{
+	letter-spacing: 10px;
+}
+
+
 
 .lineheight-0p5{
 	line-height: 0.5em;
@@ -82,6 +127,18 @@ body{
 
 .lineheight-2{
 	line-height: 2em;
+}
+
+.lineheight-2p5{
+	line-height: 2.5em;
+}
+
+.lineheight-3{
+	line-height: 3em;
+}
+
+.lineheight-3p5{
+	line-height: 3.5em;
 }
 
 .bold{
@@ -157,6 +214,13 @@ body{
 	font-size: 70px;
 }
 
+.font-size-80{
+	font-size: 80px;
+}
+
+.font-size-90{
+	font-size: 90px;
+}
 .home-content{
 	min-height:100vh;
 	height:100vh;
@@ -311,8 +375,7 @@ body{
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: black;
-	opacity: 0.9;
+	background-color: rgba(0,0,0,0.9);
 	z-index: 50000;
 }
 
@@ -322,7 +385,7 @@ body{
 	left:0px;
 	width: 100%;
 	height: 100%;
-	opacity: 0.9;
+	background-color: rgba(0,0,0,0.9);
 	z-index: 50000;
 	overflow: hidden;
 }
@@ -332,7 +395,17 @@ body{
 }
 
 .stereo{
-	text-shadow: -0.04em 0 red, 0.04em 0 cyan;
+	animation: stereo-anim 1s linear infinite;
+}
+
+@keyframes stereo-anim { 
+	0% { text-shadow: -0.01em 0 red, 0.01em 0 cyan; } 
+	50% { text-shadow: -0.02em 0 red, 0.02em 0 cyan; } 
+	100% { text-shadow: -0.01em 0 red, 0.01em 0 cyan; } 
+}
+
+.stereos{
+	 text-shadow: -0.02em 0 red, 0.02em 0 cyan; 
 }
 
 .map{
@@ -343,4 +416,17 @@ body{
 .footer{
 	width: 100%;
 	height: 35vh;
+}
+
+.navlink:hover{
+	background-color: transparent;
+	color: yellow;
+}
+
+.navlink:active{
+	color: yellow !important;
+}
+
+#brand-logo{
+	
 }

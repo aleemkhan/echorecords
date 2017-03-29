@@ -9,6 +9,7 @@
 	<meta name="author" content="Abdul Aleem Khan" />
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<meta name="Resource-type" content="Document" />
 
@@ -26,16 +27,16 @@
 <nav class="navbar navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#home">
+			<a id="brand-logo" class="navbar-brand" href="#home">
 				<img alt="Brand" class="enlarge" src="img/page1/logo_02.png">
 			</a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right topnav-font margin-top-20">
-					<li><a href="#records" class="white stereo">RECORDS</a></li>
-					<li><a href="#tv" class="white stereo">TV</a></li>
-					<li><a href="#radio" class="white stereo">RADIO</a></li>
-					<li><a href="#lastPage"><img src="img/page1/hamburger.png"></a></li>
+					<li><a href="#records" class="white stereo navlink" style="background: transparent;">RECORDS</a></li>
+					<li><a href="#tv" class="white stereo navlink" style="background: transparent;">TV</a></li>
+					<li><a href="#radio" class="white stereo navlink" style="background: transparent;">RADIO</a></li>
+					<li><a href="#lastPage" class="navlink" style="background: transparent;"><img src="img/page1/hamburger.png"></a></li>
 				</ul>
 			</div>
 	</div>
@@ -43,19 +44,18 @@
 <div id="popup-login" class="popup-login">
 	<div id="login1">
 		<div class="container-fluid login-content">
-			<div class="row margin-top-30 text-center">
+			<div class="row margin-top-150 text-center">
 				<div class="col-md-3"></div>
 				<div class="col-md-6">
 					<div class="row">
 						<div class="col-md-12">
-							<p><img class="enlarge" src="img/page1/logo-01.png"></p>
-							<p class="stereo" style="font-size:40px; font-weight: 100px;">END TO END MUSIC</p>
-							<p class="stereo" style="font-size:90px; font-weight: 1500px; line-height: 0.5em;">PLATFORM</p>
-							<p class="bold stereo">THIS IS THE DUMMY TEXT FOR NOW. WE CAN USE THE RIGHT CONTENT LATER ON. LOREM IPSUM IS TOO MAINSTREAM TEXT TO PUT HERE.</p>
+							<p><img class="enlarge animated jello" src="img/page1/logo-01.png"></p>
+							<p class="stereos animated slideInLeft bebasRegular" style="font-size:50px; font-weight: 100px; letter-spacing: 8px; ">END TO END MUSIC</p>
+							<p class="stereos animated slideInRight proximaBold" style="font-size:90px; font-weight: 1500px; line-height: 0.5em;">PLATFORM</p>
 						</div>
 					</div>
 					
-					<div class="row margin-top-30">
+					<!--div class="row margin-top-30">
 						<div class="col-md-3">
 							<div class="border-circle">
 								<p class="font-size-12">LISTEN TO</p>
@@ -84,15 +84,15 @@
 								<p class="font-size-12">FOR SUBSCRIBERS</p>
 							</div>
 						</div>
-					</div>
+					</div-->
 
-					<div class="row margin-top-30">
+					<div class="row margin-top-30 animated slideInUp">
 						<div class="col-md-2"></div>
 						<div class="col-md-4">
-							<button onclick="showform()" type="button" class="btn btn-default btn-lg col-md-12 bolder">LOGIN</button>
+							<button onclick="showform()" type="button" class="btn btn-default btn-lg col-md-12 proximaBold">LOGIN</button>
 						</div>
 						<div class="col-md-4">
-							<button onclick="showform()" type="button" class="btn btn-default btn-lg col-md-12 bolder">REGISTER</button>
+							<button onclick="showform()" type="button" class="btn btn-default btn-lg col-md-12 proximaBold">REGISTER</button>
 						</div>
 						<div class="col-md-2"></div>
 					</div>
@@ -108,7 +108,7 @@
 						<a class="navbar-brand" href="#">
 							<img alt="Brand" src="img/page1/playlist_player.png">
 						</a>
-						<p class="navbar-text margin-top-30">Playlist</p>
+						<p class="navbar-text margin-top-30" style="margin-left: -10px;">PLAYLIST</p>
 					</div>
 					<ul class="nav navbar-nav navbar-left">
      					<li class="lineheight-0p5 font-size-10 bold">
@@ -140,7 +140,7 @@
 					
 					<div class="row margin-top-30">
 						<div class="col-md-12" style="background: black; padding-top:10px;">
-							<p>PLEASE PROVIDE THE FOLLOWING DETAILS</p>
+							<p class="bebasRegular font-size-30" style="letter-spacing: 4px;">PLEASE PROVIDE THE FOLLOWING DETAILS</p>
 						</div>
 					</div>
 					<div class="row" style="background: white; padding-top: 10px; padding-bottom: 20px;">
@@ -180,7 +180,7 @@
 						<a class="navbar-brand" href="#">
 							<img alt="Brand" src="img/page1/playlist_player.png">
 						</a>
-						<p class="navbar-text margin-top-30">Playlist</p>
+						<p class="navbar-text margin-top-30" style="margin-left: -10px;">PLAYLIST</p>
 					</div>
 					<ul class="nav navbar-nav navbar-left">
      					<li class="lineheight-0p5 font-size-10 bold">
@@ -214,13 +214,19 @@
 			 -->
 			  <div class="carousel-inner" role="listbox">
 			    <div style="margin-top: -62px;" class="item active margintop-60">
-			      <img src="img/page1/bg_artist_01.png" alt="...">
+			      <img src="img/page1/home1.jpg" alt="...">
 			      <div class="carousel-caption">
 			        
 			      </div>
 			    </div>
 			    <div style="margin-top: -62px;" class="item margintop-60">
-			      <img src="img/page1/bg_albumpage_01.png" alt="...">
+			      <img src="img/page1/home2.png" alt="...">
+			      <div class="carousel-caption">
+			        
+			      </div>
+			    </div>
+			    <div style="margin-top: -62px;" class="item margintop-60">
+			      <img src="img/page1/home3.jpg" alt="...">
 			      <div class="carousel-caption">
 			        
 			      </div>
@@ -231,11 +237,10 @@
 			  
 			</div>
 			<div class="row margin-top-150">
-				<div class="col-md-1 lineheight-2p5" ></div>
-				<div class="col-md-9 lineheight-2p5" >
-					<p class="font-size-50 bold yellow stereo">END TO END MUSIC</p>
-					<p class="font-size-70 bold yellow stereo">PLATFORM</p>
-					<p class="font-size-20 bold lineheight-1 stereo">LOREM IPSUM IS A DEMO TEXT THAT IS USED TO FILL<BR> THE SPACE. IT IS A GOOD TECHNIQUE IF CLIENT TOO<br> LAZY TO PROVIDE THE ACTUAL CONTENT</p>
+				<div class="col-md-10 lineheight-3p5" >
+					<p class="font-size-50 proximaBold yellow stereo spacing-4">END TO END MUSIC</p>
+					<p class="font-size-90 proximaBold yellow stereo spacing-4">PLATFORM</p>
+					<p class="font-size-20 proximaRegular lineheight-1 stereo">WE ARE NOT HERE TO REVIVE MUSIC SCENE, WE ARE HERE TO REVIVE THE AUDIENCE.</p>
 				</div>
 				<div class="col-md-2 lineheight-0p5">
 					<p class="bold">FEATURED</p>
@@ -245,7 +250,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3" ></div>
-				<div class="col-md-6" style="padding-top:50px;">
+				<div class="col-md-6" style="padding-top:20px;">
 					<img class="enlarge" src="img/page1/logo_main.png">
 				</div>
 				<div class="col-md-3" style="padding-left: 75px; padding-top: 75px;">
@@ -569,14 +574,39 @@
 			$("#popup-tv").html(html);
 			$("#popup-tv").show();
 	} 
+
+
 </script>
 <script type="text/javascript">
+	$('#brand-logo').fadeOut();
 	fullpage.initialize('#fullpage', {
 		anchors: ['home', 'records', 'tv', 'radio', 'lastPage'],
 		menu: '#menu',
-		css3:true
+		css3:true,
+		onLeave: function(index, nextIndex, direction){
+				if(nextIndex>1){
+					$('#brand-logo').fadeIn();
+				}else{
+					$('#brand-logo').fadeOut();
+				}
+		},
+		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+			
+		},
+		afterRender: function(){
+			
+		},
+		afterResize: function(){
+			
+		},
+		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+			
+		},
+		afterLoad: function(anchorLink, index){
+            
+		}
 	});
-
+	
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiLJ6znVQ-km4K5FlDPMeF4cFBxHATLK0"></script>
     <script>
