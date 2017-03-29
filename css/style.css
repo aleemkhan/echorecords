@@ -32,6 +32,11 @@ input{
     src: url(../fonts/ProximaNova-Bold.otf);
 }
 
+@font-face {
+    font-family: proximaBlack;
+    src: url(../fonts/ProximaNova-Black.otf);
+}
+
 
 
 .nav>ul>li{
@@ -54,6 +59,10 @@ input{
 	font-family: proximaBold;
 }
 
+.proximaBlack{
+	font-family: proximaBlack;
+}
+
 .proximaRegular{
 	font-family: proximaRegular;
 }
@@ -66,7 +75,6 @@ input{
 body{
 	color:white;
 	font-family: proximaRegular;
-	letter-spacing: 2px;
 }
 
 .yellow{
@@ -161,6 +169,32 @@ body{
 	padding-top: 35px;
 
 }
+
+.abspos{
+	position:absolute;
+}
+
+.fixpos{
+	position: fixed;
+}
+
+.margin-bot-20{
+	margin-bottom: 20px;
+}
+
+.margin-bot-30{
+	margin-bottom: 30px;
+	bottom: 0px;
+}
+
+.margin-bot-40{
+	margin-bottom: 40px;
+}
+
+.margin-bot-50{
+	margin-bottom: 50px;
+}
+
 .margin-top-20{
 	margin-top: 20px;
 }
@@ -201,6 +235,9 @@ body{
 	font-size: 15px;
 }
 
+.font-size-18{
+	font-size: 18px;
+}
 
 .font-size-20{
 	font-size: 20px;
@@ -214,6 +251,10 @@ body{
 	font-size: 30px;
 }
 
+.font-size-37{
+	font-size: 37px;
+}
+
 .font-size-40{
 	font-size: 40px;
 }
@@ -222,12 +263,19 @@ body{
 	font-size: 50px;
 }
 
+.font-size-57{
+	font-size: 57px;
+}
 .font-size-60{
 	font-size: 60px;
 }
 
 .font-size-70{
 	font-size: 70px;
+}
+
+.font-size-78{
+	font-size: 78px;
 }
 
 .font-size-80{
@@ -237,6 +285,15 @@ body{
 .font-size-90{
 	font-size: 90px;
 }
+
+.font-size-100{
+	font-size: 90px;
+}
+
+.font-size-104{
+	font-size: 104px;
+}
+
 .home-content{
 	min-height:100vh;
 	height:100vh;
@@ -411,13 +468,12 @@ body{
 }
 
 .stereo{
-	animation: stereo-anim 1s linear infinite;
+	animation: stereo-anim 2s alternate infinite ease-in-out;
 }
 
 @keyframes stereo-anim { 
 	0% { text-shadow: -0.01em 0 red, 0.01em 0 cyan; } 
-	50% { text-shadow: -0.02em 0 red, 0.02em 0 cyan; } 
-	100% { text-shadow: -0.01em 0 red, 0.01em 0 cyan; } 
+	100% { text-shadow: -0.025em 0 red, 0.025em 0 cyan; } 
 }
 
 .stereos{
@@ -452,23 +508,30 @@ body{
 	border: 0px solid transparent;
 }
 
+.match-width{
+	width: 100%;
+}
+
 .img-overlay{
 	position:absolute;
 	width:100%;
 	background-color: yellow;
 	height: 100%;
 	z-index: 500;
-	padding-left: 15px;
-    padding-right: 15px;
     left:0px;
     right:0px;
     box-sizing: border-box;
     opacity: 0;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    cursor: pointer;
 }
 
 .img-overlay:hover{
 	opacity: 1;
+}
+
+.nav>li>a:focus{
+	color: yellow;
 }
 
